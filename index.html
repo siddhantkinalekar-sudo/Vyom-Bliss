@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vyom Bliss - Premium Handcrafted Belgian Couverture Chocolates. Order fresh, preservative-free luxury chocolate boxes, truffles, and custom corporate gifts in Mumbai.">
+  <title>Vyom Bliss | Crafted with Love, Melted with Luxury</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       SECTION 1: NAVBAR + MELTING DRIP EFFECT
+       ========================================== -->
+  <!-- Sticky Header Wrapper -->
+  <div class="sticky-header-wrapper">
+    <header class="sticky-nav">
+      <nav class="navbar">
+        <div class="logo-container">
+          <a href="#" class="logo-main">
+            <!-- Chocolate Swirl Icon -->
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="#E8C070">
+              <path d="M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2M12,19.5C7.86,19.5 4.5,16.14 4.5,12C4.5,7.86 7.86,4.5 12,4.5C16.14,4.5 19.5,7.86 19.5,12C19.5,16.14 16.14,19.5 12,19.5M12,6.5C8.96,6.5 6.5,8.96 6.5,12C6.5,15.04 8.96,17.5 12,17.5C15.04,17.5 17.5,15.04 17.5,12C17.5,8.96 15.04,6.5 12,6.5M12,15C10.34,15 9,13.66 9,12C9,10.34 10.34,9 12,9C13.66,9 15,10.34 15,12C15,13.66 13.66,15 12,15Z"/>
+            </svg>
+            Vyom Bliss
+          </a>
+          <span class="logo-sub">Chocolates</span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#" onclick="toggleMobileMenu(false)">Home</a></li>
+          <li><a href="#products" onclick="toggleMobileMenu(false)">Products</a></li>
+          <li><a href="#about" onclick="toggleMobileMenu(false)">About</a></li>
+          <li><a href="#reviews" onclick="toggleMobileMenu(false)">Reviews</a></li>
+          <li><a href="#faq" onclick="toggleMobileMenu(false)">FAQ</a></li>
+          <li><a href="#contact" onclick="toggleMobileMenu(false)">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <!-- Cart Bag Trigger -->
+          <button class="cart-icon-btn" onclick="toggleCart()" aria-label="Open cart">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+              <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+            </svg>
+            <span class="cart-badge" id="cartBadgeCount">0</span>
+          </button>
+
+          <!-- Hamburger Icon for Mobile -->
+          <div class="menu-toggle" id="menuToggle" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Melting Chocolate Drip (SVG) -->
+    <div class="choco-drip">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+        <path d="
+          M0,0 L1440,0 L1440,35
+          C1400,35 1390,65 1370,68 C1350,71 1340,35 1315,35
+          C1290,35 1278,72 1258,75 C1238,78 1228,35 1200,35
+          C1172,35 1160,60 1140,68 C1120,76 1108,35 1080,35
+          C1052,35 1040,70 1020,73 C1000,76 988,35 960,35
+          C932,35 920,65 900,70 C880,75 868,35 840,35
+          C812,35 800,72 778,76 C756,80 744,35 716,35
+          C688,35 676,66 656,70 C636,74 624,35 596,35
+          C568,35 556,68 534,72 C512,76 500,35 472,35
+          C444,35 432,62 412,67 C392,72 380,35 352,35
+          C324,35 312,74 290,77 C268,80 256,35 228,35
+          C200,35 188,65 168,69 C148,73 136,35 108,35
+          C80,35 68,70 46,72 C24,74 12,35 0,35 Z
+        " fill="#5C1A00"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SECTION 2: HERO BANNER
+       ========================================== -->
+  <section class="hero-section">
+    <video class="hero-video" autoplay muted loop playsinline poster="images/page-bg.jpg">
+      <source src="images/hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Hero Left Column -->
+        <div class="hero-content">
+          <span class="hero-eyebrow">Artisan · Small Batch · Mumbai</span>
+          <h1 class="hero-title">
+            Vyom Bliss <br>
+            <span class="italic-title">Crafted with Love,</span> <br>
+            <span class="accent-title">Melted with Luxury</span>
+          </h1>
+          <p class="hero-subtext">
+            Handcrafted Belgian chocolates made with the finest single-origin cacao. No preservatives, no shortcuts — just pure indulgence.
+          </p>
+          <div class="hero-buttons">
+            <a href="#products" class="btn-primary">Explore Collection</a>
+            <a href="#about" class="btn-secondary">Our Story</a>
+          </div>
+          <!-- Hero Stats Strip -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Flavours</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">2000+</span>
+              <span class="stat-label">Happy Customers</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Natural</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 3: TRUST BADGES STRIP
+       ========================================== -->
+  <section class="trust-badges-strip">
+    <div class="badges-container">
+      <span class="badge-item">🌿 No Preservatives</span>
+      <span class="badge-separator">·</span>
+      <span class="badge-item">🥛 Fresh Dairy</span>
+      <span class="badge-separator">·</span>
+      <span class="badge-item">🇮🇳 Made in Mumbai</span>
+      <span class="badge-separator">·</span>
+      <span class="badge-item">🎁 Gift Wrapping Available</span>
+      <span class="badge-separator">·</span>
+      <span class="badge-item">🚚 Same Day Delivery</span>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 4: PRODUCTS SECTION
+       ========================================== -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-eyebrow">Our Collection</span>
+        <h2 class="section-title">Crafted for Every Craving</h2>
+      </div>
+
+      <div class="filter-search-container">
+        <!-- Category tabs -->
+        <div class="tabs-wrapper" id="categoryTabs">
+          <button class="tab-btn active" onclick="filterCategory('all', this)">All</button>
+          <button class="tab-btn" onclick="filterCategory('signature', this)">Signature Chocolates</button>
+          <button class="tab-btn" onclick="filterCategory('flavoured', this)">Flavoured Collection</button>
+          <button class="tab-btn" onclick="filterCategory('truffle', this)">Premium Truffles</button>
+          <button class="tab-btn" onclick="filterCategory('gift', this)">Gift Boxes</button>
+          <button class="tab-btn" onclick="filterCategory('addon', this)">Special Add-ons</button>
+        </div>
+
+        <!-- Search input field -->
+        <div class="search-wrapper">
+          <input type="text" class="search-input" id="searchProductsInput" placeholder="Search chocolates (e.g. Hazelnut, Caramel, Box)..." oninput="searchProducts()">
+          <svg class="search-icon-svg" viewBox="0 0 24 24">
+            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Rendered dynamically via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Wavy Top Edge for Gift Wrap section -->
+  <div class="section-wave-top">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+      <path d="M0,40 C320,10 640,70 960,30 C1280,-10 1380,45 1440,40 L1440,80 L0,80 Z" fill="#6B1A00"/>
+    </svg>
+  </div>
+
+  <!-- ==========================================
+       SECTION 5: PROMOTIONAL BANNER 1 (GIFT WRAP)
+       ========================================== -->
+  <section class="promo-wrap-section">
+    <div class="container">
+      <div class="promo-grid">
+        <!-- Promo details left -->
+        <div class="promo-left">
+          <span class="promo-tag">Limited Time</span>
+          <h2 class="promo-title">Free Gift Wrapping</h2>
+          <p class="promo-subtext">
+            On all orders above ₹500. Just mention it in your special instructions when ordering. Let us deliver customized, elegant chocolates to your loved ones.
+          </p>
+          <a href="#products" class="btn-light">Shop Now</a>
+        </div>
+        <!-- Promo visual right -->
+        <div class="promo-right">
+          <div class="gold-circle-static"></div>
+          <span class="promo-emoji-large">🎁</span>
+          <div class="sparkles-container">
+            <span class="sparkle-elem sparkle-1">✨</span>
+            <span class="sparkle-elem sparkle-2">✨</span>
+            <span class="sparkle-elem sparkle-3">✨</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 6: ABOUT SECTION
+       ========================================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Left graphic layout -->
+        <div class="about-visual">
+          <div class="about-art-box">
+            <div class="art-shapes">
+              <div class="art-shape-dark-circle"></div>
+              <div class="art-shape-gold-circle"></div>
+              <div class="art-shape-bar"></div>
+              <div class="art-shape-teardrop"></div>
+            </div>
+            <div class="about-floating-badge">Est. 2023</div>
+          </div>
+        </div>
+        <!-- Right details layout -->
+        <div class="about-right">
+          <span class="section-eyebrow">Our Story</span>
+          <h2 class="section-title">Born from a <span class="italic-gold">Grandmother's Recipe</span></h2>
+          <p class="about-desc">
+            At Vyom Bliss, our chocolate journey started in a small home kitchen in Mumbai. Dedicated to restoring the art of authentic chocolate-making, we craft premium chocolates in small batches using high-quality Belgian couverture.
+          </p>
+          <p class="about-desc">
+            We source single-origin cacao beans directly from organic farms, ensuring a pure chocolate flavor profile with zero preservatives. We pour love and meticulous luxury into every bite.
+          </p>
+          
+          <div class="about-values">
+            <div class="value-item">
+              <span class="value-icon">🌱</span>
+              <div class="value-info">
+                <h4>All-Natural Ingredients</h4>
+                <p>Pure Belgian couverture, organic fruits, nuts, and fresh dairy with no preservatives.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">🤲</span>
+              <div class="value-info">
+                <h4>Handcrafted Excellence</h4>
+                <p>Each chocolate piece is tempered, molded, and decorated individually by hand.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">📦</span>
+              <div class="value-info">
+                <h4>Premium Eco-Gifting</h4>
+                <p>Carefully packed in premium, food-safe custom boxes crafted for presentation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 7: PROMOTIONAL BANNER 2 (BULK ORDERS)
+       ========================================== -->
+  <section class="promo-bulk-section">
+    <!-- Emojis floating behind -->
+    <div class="floating-bg-emojis">
+      <span class="emoji-bg-1">🍫</span>
+      <span class="emoji-bg-2">🍬</span>
+      <span class="emoji-bg-3">🍭</span>
+      <span class="emoji-bg-4">🍫</span>
+    </div>
+
+    <div class="container">
+      <div class="promo-bulk-container">
+        <span class="rotating-coffee">☕</span>
+        <h2 class="bulk-title">Bulk & Corporate Orders Welcome</h2>
+        <div class="gold-dec-line"></div>
+        <p class="bulk-subtext">
+          Planning an event, wedding, or gifting for your team? We handle orders from 20 boxes to 2000 boxes with custom branding, seasonal flavor choices, and special pricing.
+        </p>
+        <div class="bulk-buttons">
+          <button class="btn-whatsapp-quote" onclick="contactWhatsApp('Bulk Order Inquiry')">
+            <!-- WhatsApp mini-icon -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M12.01 2.01c-5.52 0-10 4.48-10 10 0 1.77.46 3.49 1.34 5.02L2.01 22l5.12-1.34c1.47.8 3.12 1.22 4.81 1.22 5.52 0 10-4.48 10-10s-4.48-10-10-10zm.07 18.25c-1.56 0-3.09-.42-4.44-1.21l-.32-.19-3.29.86.88-3.21-.21-.34a8.204 8.204 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24-0.01 4.54-3.71 8.24-8.24 8.24zm4.52-6.19c-.25-.12-1.47-.73-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.66.83-.81.99-.15.17-.3.19-.55.07-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.23.25-.39.08-.16.04-.3-.02-.42-.06-.12-.56-1.35-.77-1.85-.2-.5-.42-.43-.56-.43-.15-.01-.31-.01-.47-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1 .25.12.18 1.74 2.66 4.22 3.73.59.25 1.05.41 1.41.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.29z"/>
+            </svg>
+            WhatsApp for Quote
+          </button>
+          <a href="#products" class="btn-ghost">View Gift Sets</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 8: HOW TO ORDER
+       ========================================== -->
+  <section class="how-to-order-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-eyebrow">How It Works</span>
+        <h2 class="section-title">Ordering is Simple</h2>
+      </div>
+
+      <div class="steps-container">
+        <!-- Connecting dotted line -->
+        <div class="steps-connecting-line"></div>
+
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-icon-wrapper">
+            <span>🛒</span>
+            <span class="step-number">01</span>
+          </div>
+          <h3 class="step-title">Browse & Add to Cart</h3>
+          <p class="step-desc">
+            Explore our collection, click to see ingredients and details, and add your favorites to the cart.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-icon-wrapper">
+            <span>📋</span>
+            <span class="step-number">02</span>
+          </div>
+          <h3 class="step-title">Fill Your Details</h3>
+          <p class="step-desc">
+            Enter your name, phone, address, and any special instructions like gift wrapping options or allergies.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-icon-wrapper">
+            <span>💬</span>
+            <span class="step-number">03</span>
+          </div>
+          <h3 class="step-title">Order via WhatsApp</h3>
+          <p class="step-desc">
+            Click checkout to open your formatted order in WhatsApp. We confirm details instantly and deliver fresh.
+          </p>
+        </div>
+      </div>
+
+      <div class="order-now-btn-container">
+        <button class="btn-whatsapp-order" onclick="openOwnerWhatsApp()">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M12.01 2.01c-5.52 0-10 4.48-10 10 0 1.77.46 3.49 1.34 5.02L2.01 22l5.12-1.34c1.47.8 3.12 1.22 4.81 1.22 5.52 0 10-4.48 10-10s-4.48-10-10-10zm.07 18.25c-1.56 0-3.09-.42-4.44-1.21l-.32-.19-3.29.86.88-3.21-.21-.34a8.204 8.204 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24-0.01 4.54-3.71 8.24-8.24 8.24zm4.52-6.19c-.25-.12-1.47-.73-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.66.83-.81.99-.15.17-.3.19-.55.07-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.23.25-.39.08-.16.04-.3-.02-.42-.06-.12-.56-1.35-.77-1.85-.2-.5-.42-.43-.56-.43-.15-.01-.31-.01-.47-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1 .25.12.18 1.74 2.66 4.22 3.73.59.25 1.05.41 1.41.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.29z"/>
+          </svg>
+          💬 Order Now on WhatsApp
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 9: REVIEWS SECTION
+       ========================================== -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-eyebrow">Testimonials</span>
+        <h2 class="section-title">Loved by Chocolate Connoisseurs</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="stars-rating">★★★★★</div>
+          <p class="review-content">
+            "Ordered the dark truffle box for my anniversary and she absolutely loved it. The packaging was stunning and chocolates tasted even better than they looked."
+          </p>
+          <div class="review-author">
+            Rahul Sharma
+            <span class="author-city">Mumbai</span>
+          </div>
+        </div>
+
+        <!-- Review 2 (FEATURED) -->
+        <div class="review-card featured-review">
+          <div class="stars-rating">★★★★★</div>
+          <p class="review-content">
+            "Best chocolate I have ever had in India. The salted caramel truffle is absolutely divine. I have already ordered three times this month and have no regrets."
+          </p>
+          <div class="review-author">
+            Ananya Patel
+            <span class="author-city">Pune</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="stars-rating">★★★★★</div>
+          <p class="review-content">
+            "Ordered 50 boxes for our corporate event. Delivered on time, beautifully packed, every single client was thoroughly impressed."
+          </p>
+          <div class="review-author">
+            Meera Krishnan
+            <span class="author-city">Bangalore</span>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="review-card">
+          <div class="stars-rating">★★★★☆</div>
+          <p class="review-content">
+            "The Diwali gift hamper was a massive hit. Everyone kept asking where I got it from. Will order every festival now."
+          </p>
+          <div class="review-author">
+            Vivek Joshi
+            <span class="author-city">Delhi</span>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="review-card">
+          <div class="stars-rating">★★★★★</div>
+          <p class="review-content">
+            "Honestly did not expect homemade chocolates to be this good. The texture, the flavour, the freshness — another level entirely."
+          </p>
+          <div class="review-author">
+            Sneha Nair
+            <span class="author-city">Mumbai</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 10: PROMOTIONAL BANNER 3 (COUPON)
+       ========================================= -->
+  <section class="promo-coupon-section">
+    <div class="container">
+      <div class="coupon-outer-container">
+        <div class="coupon-card">
+          <div class="coupon-emojis">
+            <span>🍫</span>
+            <span>🍬</span>
+            <span>🍭</span>
+            <span>🎁</span>
+          </div>
+          <h2 class="coupon-title">First Order?</h2>
+          <p class="coupon-subtext">
+            Use code <strong>FIRST10</strong> at checkout for 10% off your first order. No minimum order value. Valid once per customer.
+          </p>
+          <!-- Click to copy Coupon Code -->
+          <div class="coupon-code-box" onclick="copyCouponCode('FIRST10')" title="Click to copy code">
+            <span class="coupon-code-txt">FIRST10</span>
+            <div class="coupon-code-hint">Copy this code and paste it in your cart</div>
+          </div>
+          <a href="#products" class="btn-coupon-shop">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 11: FAQ SECTION
+       ========================================== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-eyebrow">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-wrapper">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            What is the shelf life of your chocolates?
+            <svg class="faq-icon-arrow" viewBox="0 0 24 24">
+              <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+            </svg>
+          </button>
+          <div class="faq-answer-container">
+            <div class="faq-answer">
+              Fresh for 3 to 4 weeks in a cool dry place away from sunlight. Refrigeration is not recommended as it affects texture and causes chocolate bloom (whitening of surface).
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            Do you offer same-day delivery in Mumbai?
+            <svg class="faq-icon-arrow" viewBox="0 0 24 24">
+              <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+            </svg>
+          </button>
+          <div class="faq-answer-container">
+            <div class="faq-answer">
+              Yes, for orders placed before 1 PM within Mumbai. Typical delivery window is 3 to 5 hours. Delivery to other major cities takes 2 to 3 business days via express courier.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            What payment methods do you accept?
+            <svg class="faq-icon-arrow" viewBox="0 0 24 24">
+              <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+            </svg>
+          </button>
+          <div class="faq-answer-container">
+            <div class="faq-answer">
+              We accept all major UPI apps (GPay, PhonePe, Paytm), NEFT/IMPS bank transfers, and cash on delivery (COD) within Mumbai. Payment information is shared directly on WhatsApp during order confirmation.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            Do you handle corporate or bulk orders?
+            <svg class="faq-icon-arrow" viewBox="0 0 24 24">
+              <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+            </svg>
+          </button>
+          <div class="faq-answer-container">
+            <div class="faq-answer">
+              Yes! We specialize in premium corporate gifting and bulk order requests. For batches of 20+ boxes, we offer customized gift packaging with your brand logo and custom price estimates. Contact us on WhatsApp for a quotation.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            Can I get gift wrapping and a personalised message?
+            <svg class="faq-icon-arrow" viewBox="0 0 24 24">
+              <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+            </svg>
+          </button>
+          <div class="faq-answer-container">
+            <div class="faq-answer">
+              Yes! Premium packaging comes standard on all our gift boxes. You can include a personalized text message in the Special Instructions input in the cart, and we will include a handwritten greeting card free of cost.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            Do you cater to allergies or dietary restrictions?
+            <svg class="faq-icon-arrow" viewBox="0 0 24 24">
+              <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+            </svg>
+          </button>
+          <div class="faq-answer-container">
+            <div class="faq-answer">
+              Most of our products contain dairy, nuts, or soy. Please check the listed ingredients under each product. We accommodate custom nut-free batches on request. Please mention any allergies in the order instructions.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 12: FOOTER
+       ========================================== -->
+  <footer class="footer-section" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: About and socials -->
+        <div class="footer-col">
+          <h3 class="footer-title">Vyom Bliss</h3>
+          <p class="footer-about-text">
+            Premium handcrafted Belgian chocolates made in small batches with couverture and no preservatives. Handcrafted with love in Mumbai since 2023.
+          </p>
+          <button class="btn-footer-chat" onclick="openOwnerWhatsApp()">
+            💬 Chat on WhatsApp
+          </button>
+          <a href="https://instagram.com/vyomblissco" target="_blank" class="footer-insta-link">Instagram: @vyomblissco</a>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links-list">
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Product categories -->
+        <div class="footer-col">
+          <h3 class="footer-title">Our Chocolates</h3>
+          <ul class="footer-links-list">
+            <li><a href="#products" onclick="filterCategory('signature')">Signature Chocolates</a></li>
+            <li><a href="#products" onclick="filterCategory('flavoured')">Flavoured Collection</a></li>
+            <li><a href="#products" onclick="filterCategory('truffle')">Premium Truffles</a></li>
+            <li><a href="#products" onclick="filterCategory('gift')">Gift Boxes</a></li>
+            <li><a href="#products" onclick="filterCategory('addon')">Special Add-ons</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact info -->
+        <div class="footer-col">
+          <h3 class="footer-title">Contact Us</h3>
+          <div class="footer-contact-info">
+            <div class="contact-line">
+              <span class="contact-icon">📍</span>
+              <span>Mumbai, India</span>
+            </div>
+            <div class="contact-line">
+              <span class="contact-icon">📞</span>
+              <span>+91 XXXXX XXXXX</span>
+            </div>
+            <div class="contact-line">
+              <span class="contact-icon">✉️</span>
+              <span>hello@vyombliss.in</span>
+            </div>
+            <div class="contact-line">
+              <span class="contact-icon">⏰</span>
+              <span>Mon–Sat: 10am–7pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright strip -->
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 Vyom Bliss. All rights reserved. Made with 🍫 in Mumbai.</span>
+        <span class="bottom-credits"><a href="https://instagram.com/vyomblissco" target="_blank">@vyomblissco</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       CART SIDEBAR PANEL
+       ========================================== -->
+  <div class="overlay-backdrop" id="cartOverlay" onclick="toggleCart()"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <!-- Cart header -->
+    <div class="cart-header">
+      <h2 class="cart-header-title">Your Order</h2>
+      <button class="cart-close-btn" onclick="toggleCart()" aria-label="Close cart">&times;</button>
+    </div>
+
+    <!-- Scrollable list of items -->
+    <div class="cart-items-wrapper" id="cartItemsContainer">
+      <!-- Generated dynamically in app.js -->
+    </div>
+
+    <!-- Cart calculation & customer details footer -->
+    <div class="cart-footer" id="cartFooterArea" style="display: none;">
+      <!-- Coupon input box -->
+      <div class="coupon-input-group">
+        <input type="text" id="couponInput" class="coupon-input-field" placeholder="Coupon Code">
+        <button class="coupon-apply-btn" onclick="applyCoupon()">Apply</button>
+      </div>
+      <span class="coupon-message-txt" id="couponMsg"></span>
+
+      <!-- Breakdown values -->
+      <div class="cart-totals-section">
+        <div class="total-summary-row">
+          <span>Subtotal</span>
+          <span id="subtotalVal">₹0</span>
+        </div>
+        <div class="total-summary-row" id="discountValRow" style="display: none;">
+          <span>Discount</span>
+          <span id="discountVal">₹0</span>
+        </div>
+        <div class="total-summary-row grand-total-row">
+          <span>Grand Total</span>
+          <span id="grandTotalVal">₹0</span>
+        </div>
+      </div>
+
+      <!-- Customer Checkout fields -->
+      <div class="cart-customer-fields">
+        <!-- Name -->
+        <div class="input-container" id="custNameContainer">
+          <label for="custName">Full Name *</label>
+          <input type="text" id="custName" placeholder="Enter name (min 3 chars)" required>
+          <span class="field-error-msg" id="custNameError"></span>
+        </div>
+        <!-- Phone -->
+        <div class="input-container" id="custPhoneContainer">
+          <label for="custPhone">Phone Number *</label>
+          <input type="tel" id="custPhone" placeholder="10-digit mobile number" required>
+          <span class="field-error-msg" id="custPhoneError"></span>
+        </div>
+        <!-- Address -->
+        <div class="input-container" id="custAddressContainer">
+          <label for="custAddress">Delivery Address *</label>
+          <input type="text" id="custAddress" placeholder="Flat, building, street, area" required>
+          <span class="field-error-msg" id="custAddressError"></span>
+        </div>
+        <!-- Pincode -->
+        <div class="input-container" id="custPincodeContainer">
+          <label for="custPincode">Pincode *</label>
+          <input type="text" id="custPincode" placeholder="6-digit pincode" required>
+          <span class="field-error-msg" id="custPincodeError"></span>
+        </div>
+        <!-- City -->
+        <div class="input-container" id="custCityContainer">
+          <label for="custCity">City *</label>
+          <input type="text" id="custCity" placeholder="City name" required>
+          <span class="field-error-msg" id="custCityError"></span>
+        </div>
+        <!-- Special Instructions -->
+        <div class="input-container">
+          <label for="custNote">Special Instructions</label>
+          <textarea id="custNote" rows="2" placeholder="e.g. Eggless, Gift note, Delivery timing, Allergies"></textarea>
+        </div>
+      </div>
+
+      <!-- Order Trigger buttons -->
+      <button class="btn-place-order-wa" onclick="placeOrder()">
+        💬 Order via WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       PRODUCT DETAIL MODAL OVERLAY
+       ========================================== -->
+  <div class="modal-overlay" id="productModalOverlay" onclick="closeProductModalOutside(event)">
+    <div class="product-detail-modal">
+      <button class="modal-close-btn" onclick="closeProductModal()">&times;</button>
+      
+      <!-- Top banner image representation -->
+      <div class="modal-img-area" id="modalImgArea">
+        <!-- Dynamic Emoji background category color -->
+        <span id="modalImgEmoji"></span>
+        <span class="modal-badge" id="modalBadge"></span>
+      </div>
+
+      <!-- Detail details -->
+      <div class="modal-details">
+        <span class="modal-category" id="modalCategory">Category</span>
+        <h2 class="modal-title" id="modalTitle">Chocolate Name</h2>
+        
+        <div class="modal-price-weight-row">
+          <span class="modal-price" id="modalPrice">₹0</span>
+          <span class="modal-weight" id="modalWeight">per piece</span>
+        </div>
+
+        <p class="modal-desc" id="modalDesc">Detailed description...</p>
+        
+        <div class="modal-ingredients" id="modalIngredients">
+          <strong>Ingredients:</strong> <span>List here...</span>
+        </div>
+
+        <div class="modal-action-row">
+          <div class="modal-qty-selector">
+            <button class="modal-qty-btn" onclick="adjustModalQty(-1)">&minus;</button>
+            <span class="modal-qty-val" id="modalQtyVal">1</span>
+            <button class="modal-qty-btn" onclick="adjustModalQty(1)">&plus;</button>
+          </div>
+          <button class="btn-modal-add-cart" id="btnModalAddCart" onclick="addModalItemToCart()">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       TOAST SYSTEM CONTAINER
+       ========================================== -->
+  <div class="toast-container" id="toastContainer">
+    Cart updated!
+  </div>
+
+  <!-- ==========================================
+       FIREBASE SDKS (COMPAT)
+       ========================================== -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+  <!-- Main JavaScript App Logic -->
+  <script src="js/app.js"></script>
+</body>
+</html>
