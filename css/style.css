@@ -561,7 +561,7 @@ header.sticky-nav {
 /* TRUST BADGES STRIP */
 .trust-badges-strip {
   background-color: var(--primary);
-  padding: 18px 2rem;
+  padding: 28px 2rem;
   z-index: 5;
   position: relative;
   overflow: hidden;
