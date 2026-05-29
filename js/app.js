@@ -3,7 +3,7 @@
    ========================================================================== */
 
 // OWNER CONFIGURATION
-const OWNER_PHONE = "919004001000"; // Replace with owner's actual 12-digit WhatsApp number (with country code, no '+')
+const OWNER_PHONE = "919699793781"; // Replace with owner's actual 12-digit WhatsApp number (with country code, no '+')
 
 // FIREBASE CONFIGURATION
 const firebaseConfig = {
