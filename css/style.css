@@ -693,7 +693,7 @@ header.sticky-nav {
 /* PRODUCT CARD DESIGN */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 2.2rem;
 }
 
@@ -736,6 +736,13 @@ header.sticky-nav {
   align-items: center;
   font-size: 4.5rem;
   transition: var(--transition);
+}
+
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 /* Category backgrounds */
@@ -2410,7 +2417,23 @@ header.sticky-nav {
   }
   
   .products-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+  
+  .product-card {
+    flex-direction: row;
+    min-height: 260px;
+  }
+  
+  .card-img-area {
+    width: 40%;
+    min-width: 180px;
+    min-height: auto;
+    order: 2;
+  }
+  
+  .card-content {
+    order: 1;
   }
   
   .coupon-card {
@@ -2438,7 +2461,7 @@ header.sticky-nav {
   }
   
   .products-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
   
